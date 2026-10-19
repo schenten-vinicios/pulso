@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.tools/
+.cache/
+.venv/
+data/
+public/data/
+package-lock.json
+test-results/
+playwright-report/

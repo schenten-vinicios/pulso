@@ -1,0 +1,2 @@
+id,date,type,category,amount_cents,description,counterparty
+TX-INVALID,2024-01-01,receita,loja,,Venda no balcão,Cliente fictício

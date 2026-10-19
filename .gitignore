@@ -1,0 +1,45 @@
+# Dependências e ambientes virtuais
+node_modules/
+.venv/
+
+# Builds e arquivos compilados
+dist/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+
+# Caches e logs
+.cache/
+*.log
+
+# Testes e relatórios temporários
+test-results/
+playwright-report/
+
+# Ferramentas e estado local de hospedagem
+.tools/
+.netlify/
+
+# Artefatos de demonstração e distribuição, incluindo scripts auxiliares
+artifacts/
+
+# Power BI em desenvolvimento: exclusão integral
+powerbi/
+
+# Configurações privadas; exemplos sem credenciais podem ser versionados
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Documentação interna preservada somente no ambiente local
+docs/GUIA_DO_PROJETO.md
+docs/AUDITORIA_REPOSITORIO.md
+docs/VALIDACAO.md
+docs/MEMORIAL_DE_CALCULO.md
+docs/PORTFOLIO.md
+
+# Arquivos locais do sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
