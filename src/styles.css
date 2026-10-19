@@ -1,10 +1,24 @@
 :root {
+  --font-xs: 11px;
+  --font-sm: 12px;
+  --font-body: 13px;
+  --font-section: 15px;
+  --font-subvalue: 18px;
+  --font-feature: 21px;
+  --font-page: 29px;
+  --font-page-compact: 26px;
+  --font-page-mobile: 24px;
+  --font-kpi: clamp(18px, 1.7vw, 27px);
+  --font-kpi-compact: 20px;
+  --font-kpi-mobile: 22px;
+  --font-display: 32px;
+  --font-brand: 34px;
   font-family: Inter, 'Segoe UI', Arial, sans-serif;
   color: #24372f;
   background: #f6f7f4;
   font-synthesis: none;
   font-weight: 400;
-  font-size: 14px;
+  font-size: var(--font-body);
   --green: #315e4d;
   --muted: #7d877f;
   --line: #e7ebe5;
@@ -91,7 +105,7 @@ button:hover:not(:disabled) {
 .brand {
   display: flex;
   align-items: center;
-  font-size: 34px;
+  font-size: var(--font-brand);
   font-weight: 650;
   letter-spacing: -1.6px;
   padding: 0 13px;
@@ -125,17 +139,17 @@ button:hover:not(:disabled) {
 }
 .workspace strong {
   display: block;
-  font-size: 12px;
+  font-size: var(--font-sm);
   font-weight: 550;
 }
 .workspace div > span {
   display: block;
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #a5b6ab;
   margin-top: 5px;
 }
 .workspace-demo {
-  font-size: 8px;
+  font-size: var(--font-xs);
   letter-spacing: 0.8px;
   background: #324b3d;
   color: #c2d6aa;
@@ -145,7 +159,7 @@ button:hover:not(:disabled) {
   margin-left: auto;
 }
 .nav-label {
-  font-size: 9px;
+  font-size: var(--font-xs);
   letter-spacing: 1.6px;
   color: #8aa194;
   margin: 0 15px 13px;
@@ -161,7 +175,7 @@ button:hover:not(:disabled) {
   gap: 12px;
   padding: 13px 14px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: var(--font-sm);
   color: #b9c8be;
 }
 .sidebar nav a.active {
@@ -192,13 +206,13 @@ button:hover:not(:disabled) {
   color: #c8dfa8;
 }
 .sidebar-tip h3 {
-  font-size: 12px;
+  font-size: var(--font-sm);
   font-weight: 500;
   margin-top: 10px;
 }
 .sidebar-tip p {
   color: #a3b6a7;
-  font-size: 11px;
+  font-size: var(--font-xs);
   line-height: 1.8;
   margin-top: 8px;
 }
@@ -208,17 +222,17 @@ button:hover:not(:disabled) {
   align-items: center;
   gap: 7px;
   color: #c5dda9;
-  font-size: 10px;
+  font-size: var(--font-xs);
   margin-top: 16px;
 }
 .sidebar-footer {
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #b0c1b4;
   padding: 24px 8px 0;
 }
 .sidebar-footer small {
   display: block;
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: #81988a;
   margin-top: 8px;
 }
@@ -246,7 +260,7 @@ button:hover:not(:disabled) {
   display: flex;
   align-items: center;
   gap: 17px;
-  font-size: 11px;
+  font-size: var(--font-xs);
   color: #89918b;
 }
 .breadcrumb strong {
@@ -262,7 +276,7 @@ button:hover:not(:disabled) {
   gap: 20px;
 }
 .demo-pill {
-  font-size: 10px;
+  font-size: var(--font-xs);
   background: #f2f5ed;
   color: #657355;
   border: 1px solid #e4eadb;
@@ -285,7 +299,7 @@ button:hover:not(:disabled) {
   height: 30px;
   display: grid;
   place-items: center;
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #597046;
 }
 .icon-button {
@@ -315,7 +329,7 @@ main {
   margin-bottom: 28px;
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: var(--font-xs);
   font-weight: 600;
   letter-spacing: 1.7px;
   color: #7d8b77;
@@ -324,7 +338,7 @@ main {
   gap: 8px;
 }
 h1 {
-  font-size: 29px;
+  font-size: var(--font-page);
   font-weight: 550;
   letter-spacing: -1.1px;
   line-height: 1.3;
@@ -332,7 +346,7 @@ h1 {
 }
 .page-heading p {
   color: #899186;
-  font-size: 11px;
+  font-size: var(--font-xs);
   line-height: 1.7;
 }
 .button {
@@ -341,7 +355,7 @@ h1 {
   justify-content: center;
   gap: 9px;
   border-radius: 6px;
-  font-size: 11px;
+  font-size: var(--font-sm);
   padding: 11px 15px;
   white-space: nowrap;
   min-height: 38px;
@@ -373,14 +387,14 @@ h1 {
 .filters label {
   display: grid;
   gap: 6px;
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: #8a9388;
   flex: 1;
 }
 .filters select,
 .filters input {
   color: #415440;
-  font-size: 11px;
+  font-size: var(--font-sm);
   background: none;
   border: 0;
   min-height: 24px;
@@ -410,7 +424,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #849079;
   white-space: nowrap;
   padding: 5px;
@@ -419,7 +433,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #85907e;
   margin-top: 20px;
   gap: 12px;
@@ -440,7 +454,7 @@ h1 {
   background: none;
   border: 0;
   color: #4d6547;
-  font-size: 10px;
+  font-size: var(--font-sm);
   padding: 5px 15px 5px 3px;
 }
 .comparison-line label > svg {
@@ -449,7 +463,7 @@ h1 {
   right: 0;
 }
 .comparison-note {
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: #8b9587;
   margin: 6px 0 17px;
   line-height: 1.6;
@@ -474,7 +488,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: var(--font-sm);
   color: #7d8976;
   gap: 3px;
 }
@@ -483,7 +497,7 @@ h1 {
 }
 .kpi > strong {
   display: block;
-  font-size: clamp(18px, 1.7vw, 27px);
+  font-size: var(--font-kpi);
   font-weight: 550;
   letter-spacing: -0.9px;
   margin: 16px 0 15px;
@@ -494,7 +508,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 8px;
+  font-size: var(--font-xs);
   white-space: nowrap;
   min-height: 18px;
 }
@@ -507,7 +521,7 @@ h1 {
   gap: 2px;
   border-radius: 4px;
   padding: 3px 4px;
-  font-size: 9px;
+  font-size: var(--font-xs);
 }
 .delta.good {
   background: #eff5e9;
@@ -537,18 +551,18 @@ h1 {
   gap: 15px;
 }
 .panel h2 {
-  font-size: 13px;
+  font-size: var(--font-section);
   font-weight: 550;
   letter-spacing: -0.15px;
 }
 .panel-heading p {
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #92998b;
   margin-top: 6px;
   line-height: 1.6;
 }
 .unit-tag {
-  font-size: 8px;
+  font-size: var(--font-xs);
   color: #8c9784;
   background: #f7f8f4;
   border: 1px solid #edf0e7;
@@ -559,12 +573,12 @@ h1 {
 .chart {
   height: 245px;
   margin: 10px 17px 18px 5px;
-  font-size: 11px;
+  font-size: var(--font-xs);
 }
 .inline-legend {
   display: flex;
   gap: 17px;
-  font-size: 9px;
+  font-size: var(--font-sm);
   color: #84907b;
   padding: 18px 23px 0;
 }
@@ -600,11 +614,11 @@ h1 {
   gap: 7px;
 }
 .donut-label span {
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: #89967c;
 }
 .donut-label strong {
-  font-size: 18px;
+  font-size: var(--font-subvalue);
   letter-spacing: -0.5px;
   font-weight: 550;
 }
@@ -616,7 +630,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: var(--font-sm);
   color: #7a8970;
 }
 .category-legend strong {
@@ -625,7 +639,7 @@ h1 {
   color: #4e6444;
 }
 .category-legend small {
-  font-size: 9px;
+  font-size: var(--font-sm);
   color: #97a18e;
   min-width: 77px;
   text-align: right;
@@ -644,18 +658,18 @@ h1 {
   padding: 23px 23px 20px;
 }
 .insight-panel .eyebrow {
-  font-size: 8px;
+  font-size: var(--font-xs);
   letter-spacing: 1.6px;
   color: #74855e;
 }
 .insight-panel h2 {
-  font-size: 21px;
+  font-size: var(--font-feature);
   font-weight: 500;
   letter-spacing: -0.6px;
   margin-top: 14px;
 }
 .insight-intro {
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #8c977e;
   margin-top: 7px;
 }
@@ -665,17 +679,17 @@ h1 {
   margin-top: 22px;
 }
 .insight-item > span {
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: #8d9c7b;
   margin-top: 2px;
 }
 .insight-item h3 {
-  font-size: 10px;
+  font-size: var(--font-body);
   font-weight: 550;
   color: #4b603c;
 }
 .insight-item p {
-  font-size: 10px;
+  font-size: var(--font-xs);
   line-height: 1.7;
   color: #81916f;
   margin-top: 5px;
@@ -684,7 +698,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #516c3f;
   border-top: 1px solid #d8e1cc;
   padding: 15px 0 0;
@@ -711,13 +725,13 @@ h1 {
   color: #829271;
 }
 .explore-strip strong {
-  font-size: 10px;
+  font-size: var(--font-xs);
   font-weight: 500;
   display: block;
 }
 .explore-strip small {
   display: block;
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: #929c87;
   margin-top: 5px;
 }
@@ -725,7 +739,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #627850;
   white-space: nowrap;
 }
@@ -734,7 +748,7 @@ h1 {
   justify-content: space-between;
   gap: 12px;
   color: #9ba491;
-  font-size: 9px;
+  font-size: var(--font-xs);
   border-top: 1px solid var(--line);
   padding: 20px 0 23px;
   margin-top: 28px;
@@ -745,28 +759,32 @@ h1 {
   gap: 5px;
 }
 .table-scroll {
+  position: relative;
   overflow: auto;
 }
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 11px;
+  font-size: var(--font-sm);
   text-align: left;
 }
 th {
   font-weight: 500;
   background: #fafbf8;
-  color: #8b9584;
-  font-size: 9px;
+  color: #64745b;
+  font-size: inherit;
   white-space: nowrap;
 }
 td,
 th {
   padding: 15px 20px;
   border-bottom: 1px solid #edf0e9;
+  font-size: inherit;
+  color: #64745b;
 }
 td {
   color: #64745b;
+  font-size: inherit;
 }
 tbody tr:hover {
   background: #fafbf7;
@@ -778,13 +796,17 @@ tbody tr:hover {
 }
 .numeric .sort-button {
   margin-left: auto;
+  font-size: var(--font-sm);
 }
 tfoot {
   background: #f6f8f1;
-  font-weight: 500;
+  font-weight: 600;
 }
 tfoot th {
   background: transparent;
+  font-size: inherit;
+  color: #64745b;
+  font-weight: inherit;
 }
 .transaction-panel .panel-heading {
   padding-bottom: 20px;
@@ -809,19 +831,19 @@ tfoot th {
   border: 0;
   background: none;
   padding: 11px 0;
-  font-size: 11px;
+  font-size: var(--font-sm);
   outline-offset: 2px;
 }
 .table-tools select {
   padding: 9px 13px;
-  font-size: 11px;
+  font-size: var(--font-sm);
   border: 1px solid #e3e8dc;
   border-radius: 6px;
   background: #fff;
   color: #6f7e62;
 }
 .transaction-link {
-  font-size: 11px;
+  font-size: var(--font-sm);
   text-align: left;
   padding: 0;
   line-height: 1.6;
@@ -829,12 +851,12 @@ tfoot th {
 }
 .transaction-link span {
   display: block;
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: #9aa28e;
   margin-top: 3px;
 }
 .type-tag {
-  font-size: 9px;
+  font-size: var(--font-xs);
   border: 1px solid #e4ebdc;
   border-radius: 4px;
   padding: 4px 8px;
@@ -862,7 +884,7 @@ tfoot th {
   align-items: center;
   gap: 7px;
   padding: 0;
-  font-size: 9px;
+  font-size: var(--font-sm);
 }
 .muted {
   color: #8b9681;
@@ -875,7 +897,7 @@ tfoot th {
   align-items: center;
   justify-content: space-between;
   padding: 16px 22px;
-  font-size: 10px;
+  font-size: var(--font-sm);
   color: #8d9882;
 }
 .pagination > div {
@@ -887,7 +909,7 @@ tfoot th {
   padding: 28px 30px;
 }
 .panel.about-panel h2 {
-  font-size: 15px;
+  font-size: var(--font-section);
   font-weight: 550;
 }
 .about-indicators {
@@ -903,19 +925,19 @@ tfoot th {
   background: #fafbf8;
 }
 .about-indicators dt {
-  font-size: 13px;
+  font-size: var(--font-body);
   font-weight: 550;
 }
 .about-indicators dd,
 .about-guide p,
 .about-data p {
   margin: 6px 0 0;
-  font-size: 12px;
+  font-size: var(--font-sm);
   line-height: 1.7;
   color: #6b7b62;
 }
 .about-calculation-note {
-  font-size: 11px;
+  font-size: var(--font-xs);
   line-height: 1.7;
   color: #73816b;
   margin: 12px 0 0;
@@ -939,7 +961,7 @@ tfoot th {
   gap: 12px;
 }
 .about-guide h3 {
-  font-size: 12px;
+  font-size: var(--font-body);
   font-weight: 550;
 }
 .about-guide p {
@@ -958,10 +980,10 @@ tfoot th {
   border-radius: 6px;
 }
 .about-panel .about-data h2 {
-  font-size: 12px;
+  font-size: var(--font-sm);
 }
 .about-data p {
-  font-size: 11px;
+  font-size: var(--font-xs);
 }
 .detail-list > div {
   display: flex;
@@ -970,7 +992,7 @@ tfoot th {
   gap: 20px;
   border-bottom: 1px solid var(--line);
   padding: 13px 0;
-  font-size: 11px;
+  font-size: var(--font-xs);
 }
 .detail-list dt {
   color: #859578;
@@ -984,7 +1006,7 @@ tfoot th {
   border: 1px solid #e3e9da;
   background: #f2f6eb;
   color: #73845f;
-  font-size: 11px;
+  font-size: var(--font-xs);
   border-radius: 6px;
   margin-bottom: 20px;
 }
@@ -994,13 +1016,13 @@ tfoot th {
   padding: 60px 25px;
   text-align: center;
   color: #8b987e;
-  font-size: 12px;
+  font-size: var(--font-sm);
   line-height: 1.8;
 }
 .empty h3,
 .error-state h2,
 .loading h2 {
-  font-size: 17px;
+  font-size: var(--font-section);
   font-weight: 500;
   color: #4d6541;
   margin: 10px 0;
@@ -1059,7 +1081,7 @@ dialog .panel-heading {
   padding: 23px 0;
 }
 .detail-value {
-  font-size: 32px;
+  font-size: var(--font-display);
   font-weight: 500;
   letter-spacing: -1px;
   margin: 12px 0;
@@ -1068,7 +1090,7 @@ dialog .panel-heading {
   line-height: 1.6;
 }
 .demo-note {
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #8e9c80;
   margin-top: 24px;
 }
@@ -1103,7 +1125,7 @@ dialog .panel-heading {
 }
 .recharts-default-tooltip {
   border-radius: 7px;
-  font-size: 11px;
+  font-size: var(--font-xs);
   box-shadow: 0 4px 20px #243c2710;
 }
 .recharts-wrapper:focus {
@@ -1114,7 +1136,7 @@ dialog .panel-heading {
     padding-top: 40px;
   }
   .kpi > strong {
-    font-size: 28px;
+    font-size: var(--font-page);
   }
   .chart {
     height: 285px;
@@ -1157,7 +1179,7 @@ dialog .panel-heading {
   }
   .filters select,
   .filters input {
-    font-size: 10px;
+    font-size: var(--font-xs);
   }
   .date-range input {
     width: 105px;
@@ -1169,14 +1191,14 @@ dialog .panel-heading {
     padding: 16px 12px;
   }
   .kpi > strong {
-    font-size: 20px;
+    font-size: var(--font-kpi-compact);
   }
   .kpi-bottom {
     flex-wrap: wrap;
     gap: 3px;
   }
   .kpi-label {
-    font-size: 9px;
+    font-size: var(--font-sm);
   }
   .chart-grid {
     gap: 15px;
@@ -1184,9 +1206,10 @@ dialog .panel-heading {
   }
   .category-legend small {
     display: none;
+    font-size: var(--font-sm);
   }
   h1 {
-    font-size: 26px;
+    font-size: var(--font-page-compact);
   }
   .panel-heading {
     padding: 20px 17px 0;
@@ -1203,7 +1226,7 @@ dialog .panel-heading {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .kpi > strong {
-    font-size: 23px;
+    font-size: var(--font-kpi-mobile);
   }
   .filters {
     flex-wrap: wrap;
@@ -1243,6 +1266,7 @@ dialog .panel-heading {
   }
   .category-legend small {
     display: block;
+    font-size: var(--font-sm);
   }
   .main-charts .chart {
     height: 260px;
@@ -1258,6 +1282,7 @@ dialog .panel-heading {
   }
   .page-heading > .button {
     margin-top: 25px;
+    font-size: var(--font-sm);
   }
 }
 @media (max-width: 760px) {
@@ -1288,7 +1313,7 @@ dialog .panel-heading {
   }
   .breadcrumb {
     gap: 10px;
-    font-size: 10px;
+    font-size: var(--font-xs);
   }
   .breadcrumb > span:not(.breadcrumb-slash) {
     display: none;
@@ -1303,7 +1328,7 @@ dialog .panel-heading {
     display: none;
   }
   .demo-pill {
-    font-size: 9px;
+    font-size: var(--font-xs);
   }
   .avatar {
     width: 27px;
@@ -1317,20 +1342,20 @@ dialog .panel-heading {
     margin-bottom: 22px;
   }
   .page-heading .eyebrow {
-    font-size: 7px;
+    font-size: var(--font-xs);
     letter-spacing: 1.4px;
   }
   h1 {
-    font-size: 25px;
+    font-size: var(--font-page-mobile);
     max-width: 320px;
   }
   .page-heading p {
-    font-size: 10px;
+    font-size: var(--font-xs);
     max-width: 280px;
   }
   .page-heading > .button {
     padding: 9px;
-    font-size: 9px;
+    font-size: var(--font-sm);
     margin-top: 24px;
     gap: 5px;
   }
@@ -1352,7 +1377,7 @@ dialog .panel-heading {
   }
   .date-range input {
     width: 100%;
-    font-size: 12px;
+    font-size: var(--font-sm);
   }
   .date-range label {
     flex: 1;
@@ -1362,20 +1387,20 @@ dialog .panel-heading {
     padding-top: 10px;
   }
   .filters label {
-    font-size: 10px;
+    font-size: var(--font-xs);
   }
   .filters select {
-    font-size: 12px;
+    font-size: var(--font-sm);
   }
   .comparison-line {
     flex-wrap: wrap;
     gap: 8px;
   }
   .comparison-line select {
-    font-size: 10px;
+    font-size: var(--font-sm);
   }
   .comparison-note {
-    font-size: 8px;
+    font-size: var(--font-xs);
     margin-top: 7px;
   }
   .kpi-grid {
@@ -1386,17 +1411,17 @@ dialog .panel-heading {
     padding: 16px 13px;
   }
   .kpi > strong {
-    font-size: 24px;
+    font-size: var(--font-page-mobile);
     margin: 13px 0 11px;
   }
   .kpi-label {
-    font-size: 10px;
+    font-size: var(--font-sm);
   }
   .kpi:last-child {
     grid-column: span 2;
   }
   .kpi-bottom {
-    font-size: 9px;
+    font-size: var(--font-xs);
   }
   .chart-grid {
     gap: 16px;
@@ -1406,7 +1431,7 @@ dialog .panel-heading {
     padding: 20px 17px 0;
   }
   .panel h2 {
-    font-size: 13px;
+    font-size: var(--font-section);
   }
   .expense-content {
     display: block;
@@ -1420,6 +1445,7 @@ dialog .panel-heading {
   }
   .category-legend small {
     display: block;
+    font-size: var(--font-sm);
   }
   .chart {
     margin-right: 8px;
@@ -1433,7 +1459,7 @@ dialog .panel-heading {
     display: none;
   }
   .explore-strip button {
-    font-size: 9px;
+    font-size: var(--font-xs);
     gap: 5px;
     align-self: center;
   }
@@ -1442,10 +1468,10 @@ dialog .panel-heading {
     line-height: 1.6;
   }
   .explore-strip small {
-    font-size: 8px;
+    font-size: var(--font-xs);
   }
   .page-footer {
-    font-size: 8px;
+    font-size: var(--font-xs);
     flex-wrap: wrap;
     line-height: 1.7;
   }
@@ -1458,24 +1484,27 @@ dialog .panel-heading {
   }
   .table-tools select {
     width: 100%;
+    font-size: var(--font-sm);
   }
   .transaction-panel .panel-heading {
     padding: 20px 15px;
     gap: 8px;
   }
   .transaction-panel .button {
-    font-size: 9px;
+    font-size: var(--font-sm);
     padding: 9px;
   }
   td,
   th {
     padding: 12px 15px;
+    font-size: inherit;
+    color: #64745b;
   }
   td {
-    font-size: 10px;
+    font-size: inherit;
   }
   .pagination {
-    font-size: 9px;
+    font-size: var(--font-sm);
     padding: 14px;
   }
   .pagination > div {
@@ -1503,49 +1532,49 @@ dialog .panel-heading {
 
 /* Tipografia de apoio com contraste legível nas telas menores. */
 .page-heading p {
-  font-size: 12px;
+  font-size: var(--font-sm);
   color: #727e6b;
 }
 .sidebar nav a {
-  font-size: 13px;
+  font-size: var(--font-body);
 }
 .workspace strong {
-  font-size: 13px;
+  font-size: var(--font-body);
 }
 .panel h2 {
-  font-size: 14px;
+  font-size: var(--font-section);
 }
 .panel-heading p {
-  font-size: 11px;
+  font-size: var(--font-xs);
   color: #7d8973;
 }
 .kpi-label {
-  font-size: 11px;
+  font-size: var(--font-sm);
   color: #718164;
 }
 .kpi-bottom {
-  font-size: 9px;
+  font-size: var(--font-xs);
 }
 .comparison-note {
-  font-size: 10px;
+  font-size: var(--font-xs);
   color: #7a886f;
 }
 .insight-item h3 {
-  font-size: 12px;
+  font-size: var(--font-body);
 }
 .insight-item p,
 .insight-intro {
-  font-size: 11px;
+  font-size: var(--font-sm);
   color: #6f815c;
 }
 .insight-panel > button {
-  font-size: 11px;
+  font-size: var(--font-xs);
 }
 .category-legend > div {
-  font-size: 11px;
+  font-size: var(--font-sm);
 }
 .category-legend small {
-  font-size: 10px;
+  font-size: var(--font-sm);
   color: #7e8d70;
 }
 .page-footer {
@@ -1567,8 +1596,8 @@ dialog .panel-heading {
   align-items: center;
   flex-wrap: wrap;
   gap: 7px;
-  color: #73836a;
-  font-size: 11px;
+  color: #64745b;
+  font-size: var(--font-sm);
 }
 .comparison-periods strong {
   font-weight: 500;
@@ -1608,14 +1637,16 @@ dialog .panel-heading {
 .comparison-table td,
 .comparison-table th {
   padding: 14px 9px;
+  font-size: inherit;
+  color: #64745b;
 }
 .comparison-table tbody th {
   background: none;
   color: #64745b;
-  font-size: 11px;
+  font-size: inherit;
 }
 .analysis-variation {
-  font-size: 11px;
+  font-size: var(--font-sm);
 }
 .analysis-variation.good {
   color: #53793d;
@@ -1624,7 +1655,7 @@ dialog .panel-heading {
   color: #a67645;
 }
 .comparison-footnote {
-  font-size: 10px;
+  font-size: var(--font-xs);
   line-height: 1.8;
   color: #7d8b72;
   margin: 12px 9px 0;
@@ -1639,6 +1670,8 @@ dialog .panel-heading {
   .comparison-table td,
   .comparison-table th {
     padding: 14px 12px;
+    font-size: inherit;
+    color: #64745b;
   }
 }
 @media (max-width: 760px) {
@@ -1647,7 +1680,8 @@ dialog .panel-heading {
     padding: 12px 10px 20px;
   }
   .comparison-periods > span {
-    font-size: 10px;
+    font-size: var(--font-sm);
+    color: #64745b;
   }
   .comparison-panel .unit-tag {
     display: none;
@@ -1655,22 +1689,25 @@ dialog .panel-heading {
   .comparison-table td,
   .comparison-table th {
     padding: 12px 9px;
+    font-size: inherit;
+    color: #64745b;
   }
   .comparison-table tbody th {
-    font-size: 10px;
+    font-size: inherit;
     white-space: normal;
     min-width: 88px;
+    color: #64745b;
   }
   .comparison-table tbody .numeric {
-    font-size: 10px;
+    font-size: var(--font-sm);
   }
   .analysis-variation {
-    font-size: 10px;
+    font-size: var(--font-sm);
   }
 }
 @media (max-width: 1250px) {
   .kpi-label {
-    font-size: 10px;
+    font-size: var(--font-sm);
   }
 }
 @media (max-width: 760px) {
@@ -1682,22 +1719,36 @@ dialog .panel-heading {
   }
   .page-heading > .button {
     margin-top: 3px;
-    font-size: 11px;
+    font-size: var(--font-sm);
     padding: 10px 12px;
   }
   .page-heading p {
     max-width: none;
   }
   .kpi-label {
-    font-size: 11px;
+    font-size: var(--font-sm);
   }
   .kpi > strong {
-    font-size: 23px;
+    font-size: var(--font-kpi-mobile);
   }
   .comparison-note {
-    font-size: 10px;
+    font-size: var(--font-xs);
   }
   .table-tools input {
-    font-size: 13px;
+    font-size: var(--font-body);
+  }
+}
+
+.chart-legend-label {
+  color: #506747;
+  font-size: var(--font-sm);
+}
+
+@media (max-width: 380px) {
+  .kpi-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .kpi:last-child {
+    grid-column: auto;
   }
 }

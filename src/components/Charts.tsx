@@ -22,6 +22,21 @@ const palette = ['#234c40', '#7eaa79', '#bfd494', '#d3b67c', '#8ea9a7', '#d2dcd7
 const shortMoney = (v: number) =>
   `${(v / 100000).toLocaleString('pt-BR', { maximumFractionDigits: 0 })} mil`
 const tooltip = (value: unknown) => money(Number(value))
+const tooltipStyles = {
+  contentStyle: {
+    backgroundColor: '#fff',
+    border: '1px solid #dfe6db',
+    borderRadius: 8,
+    boxShadow: '0 8px 24px #152f2814',
+    padding: '12px 14px',
+    fontSize: 'var(--font-body)',
+    lineHeight: 1.6,
+    color: '#24372f',
+  },
+  itemStyle: { color: '#344f41', padding: '3px 0', fontWeight: 500 },
+  labelStyle: { color: '#24372f', fontWeight: 600, marginBottom: 5 },
+}
+const legendLabel = (label: string) => <span className="chart-legend-label">{label}</span>
 
 export function EvolutionChart({ data, result = false }: { data: Series; result?: boolean }) {
   return (
@@ -44,17 +59,22 @@ export function EvolutionChart({ data, result = false }: { data: Series; result?
               axisLine={false}
               tickLine={false}
               tickMargin={12}
-              fontSize={11}
+              fontSize="var(--font-sm)"
               minTickGap={18}
             />
             <YAxis
               tickFormatter={shortMoney}
               axisLine={false}
               tickLine={false}
-              fontSize={11}
+              fontSize="var(--font-sm)"
               width={56}
             />
-            <Tooltip formatter={tooltip} labelFormatter={(v) => monthLabel(String(v))} />
+            <Tooltip
+              {...tooltipStyles}
+              formatter={tooltip}
+              labelFormatter={(v) => monthLabel(String(v))}
+              cursor={{ fill: '#315e4d', fillOpacity: 0.06 }}
+            />
             <ReferenceLine y={0} stroke="#acbbb3" />
             <Bar
               isAnimationActive={false}
@@ -78,16 +98,21 @@ export function EvolutionChart({ data, result = false }: { data: Series; result?
               tickLine={false}
               tickMargin={12}
               minTickGap={18}
-              fontSize={11}
+              fontSize="var(--font-sm)"
             />
             <YAxis
               tickFormatter={shortMoney}
               axisLine={false}
               tickLine={false}
-              fontSize={11}
+              fontSize="var(--font-sm)"
               width={56}
             />
-            <Tooltip formatter={tooltip} labelFormatter={(v) => monthLabel(String(v))} />
+            <Tooltip
+              {...tooltipStyles}
+              formatter={tooltip}
+              labelFormatter={(v) => monthLabel(String(v))}
+              cursor={{ stroke: '#a8b6a2', strokeWidth: 1 }}
+            />
             <Area
               isAnimationActive={false}
               type="monotone"
@@ -151,7 +176,7 @@ export function ExpensesChart({
                 <Cell key={v.name} fill={palette[i % palette.length]} />
               ))}
             </Pie>
-            <Tooltip formatter={tooltip} />
+            <Tooltip {...tooltipStyles} formatter={tooltip} />
           </PieChart>
         </ResponsiveContainer>
         <div className="donut-label">
@@ -189,16 +214,20 @@ export function ComparisonChart({
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
           <CartesianGrid vertical={false} stroke="#edf0ec" />
-          <XAxis dataKey="name" axisLine={false} tickLine={false} fontSize={12} />
+          <XAxis dataKey="name" axisLine={false} tickLine={false} fontSize="var(--font-sm)" />
           <YAxis
             tickFormatter={shortMoney}
             axisLine={false}
             tickLine={false}
             width={56}
-            fontSize={11}
+            fontSize="var(--font-sm)"
           />
-          <Tooltip formatter={tooltip} />
-          <Legend />
+          <Tooltip
+            {...tooltipStyles}
+            formatter={tooltip}
+            cursor={{ fill: '#315e4d', fillOpacity: 0.06 }}
+          />
+          <Legend formatter={legendLabel} />
           <Bar
             isAnimationActive={false}
             dataKey="anterior"
